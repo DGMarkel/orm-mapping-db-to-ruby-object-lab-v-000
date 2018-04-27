@@ -34,7 +34,8 @@ class Student
       student = DB[:conn].execute(sql, name).map do |row|
         self.new_from_db(row)
       end
-      student.flatten
+      binding.pry
+      student.name
   end
 
   def save
