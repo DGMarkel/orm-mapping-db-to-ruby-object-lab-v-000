@@ -34,7 +34,7 @@ class Student
       student = DB[:conn].execute(sql, name).map do |row|
         self.new_from_db(row)
       end
-      student
+      student.flatten
   end
 
   def save
