@@ -26,7 +26,7 @@ class Student
     # return a new instance of the Student class
     sql = <<-SQL
       SELECT * FROM students
-      WHERE students.name = ?
+      WHERE name = ?
       SQL
 
       DB[:conn].execute(sql, name).map do |row|
